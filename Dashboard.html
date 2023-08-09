@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Iframes</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden; /* Prevents scrollbars if the iframes' content exceeds their box */
+        }
+
+        .box {
+            width: 50%;
+            height: 50%;
+            flex-grow: 1;
+            border: none; /* This will remove any borders around the iframe */
+            overflow: hidden; /* In case iframe content exceeds its size */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <iframe src="https://grafana.ext.icrc.org/d/NBqC_nY7z/fortigate-isp-performance?orgId=1&var-Region=AFRICA%20West&var-Site=TRIFGT" title="Iframe 1"></iframe>
+    </div>
+    <div class="box">
+        <iframe src="http://prtg.bsisp.ly/group.htm?id=0#tab1" title="Iframe 2"></iframe>
+    </div>
+    <div class="box">
+        <iframe src="https://10.146.8.1/login?redir=%2Fnetwork%2Fvirtualwan%3FtabType%3Dmembers&msg=session_expired" title="Iframe 3"></iframe>
+    </div>
+    <div class="box">
+        <iframe src="http://102.221.9.233:803/index.htm" title="Iframe 4"></iframe>
+    </div>
+</body>
+</html>
